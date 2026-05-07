@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "shape-canvas": "../../components/shape-canvas/shape-canvas"
+  }
+}

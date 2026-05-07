@@ -1,0 +1,42 @@
+<view class="page">
+  <view class="hero">
+    <view class="eyebrow">纯前端 · 微信小程序</view>
+    <view class="title">立体图形展开图观察器</view>
+    <view class="subtitle">简洁查看立体图形（正方体、圆锥、棱锥等）及其展开图，支持拖动、缩放、旋转与导出。</view>
+  </view>
+
+  <view class="shape-list">
+    <block wx:for="{{scenes}}" wx:key="id">
+      <view class="shape-card {{currentSceneId === item.id ? 'active' : ''}}" bindtap="onSelectScene" data-id="{{item.id}}">
+        <view class="shape-card__title">{{item.title}}</view>
+        <view class="shape-card__subtitle">{{item.subtitle}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="panel">
+    <view class="panel__header">
+      <view>
+        <view class="panel__title">{{currentScene.title}}</view>
+        <view class="panel__subtitle">{{currentScene.subtitle}}</view>
+      </view>
+      <view class="panel__badge">{{currentMode.label}}</view>
+    </view>
+
+    <view class="mode-tabs">
+      <block wx:for="{{currentSceneModes}}" wx:key="key">
+        <view class="mode-tab {{currentModeKey === item.key ? 'selected' : ''}}" bindtap="onSelectMode" data-key="{{item.key}}">
+          {{item.label}}
+        </view>
+      </block>
+    </view>
+
+    <shape-canvas scene="{{currentScene}}" modeKey="{{currentModeKey}}"></shape-canvas>
+
+    <view class="tips">
+      <view class="tip">拖动画布可平移</view>
+      <view class="tip">双指捏合可缩放</view>
+      <view class="tip">未来会补导出与参数保存</view>
+    </view>
+  </view>
+</view>

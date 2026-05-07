@@ -1,0 +1,13 @@
+<view class="canvas-shell">
+  <view class="canvas-header">
+    <view class="canvas-title">{{scene.title}}</view>
+    <view class="canvas-tag">{{modeLabel}}</view>
+  </view>
+
+  <view class="canvas-wrap" bindtouchstart="onTouchStart" bindtouchmove="onTouchMove" bindtouchend="onTouchEnd" bindtouchcancel="onTouchEnd">
+    <canvas type="2d" id="previewCanvas" class="preview-canvas"></canvas>
+    <view class="canvas-overlay">
+      <text class="overlay-text">{{overlayText}}</text>
+    </view>
+  </view>
+</view>

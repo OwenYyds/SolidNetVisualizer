@@ -1,0 +1,60 @@
+.canvas-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.canvas-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #182030;
+}
+
+.canvas-tag {
+  font-size: 22rpx;
+  color: #49617d;
+  background: rgba(73, 97, 125, 0.12);
+  padding: 10rpx 18rpx;
+  border-radius: 999rpx;
+}
+
+.canvas-wrap {
+  position: relative;
+  height: 700rpx;
+  border-radius: 32rpx;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fffdf9 0%, #f8f7f1 100%);
+  border: 1rpx solid rgba(37, 48, 67, 0.08);
+  box-shadow: 0 18rpx 40rpx rgba(24, 32, 48, 0.08);
+}
+
+.preview-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.canvas-overlay {
+  position: absolute;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 24rpx;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.overlay-text {
+  max-width: 100%;
+  padding: 12rpx 20rpx;
+  font-size: 22rpx;
+  color: #445066;
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 999rpx;
+  backdrop-filter: blur(8px);
+}
